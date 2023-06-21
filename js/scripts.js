@@ -30,13 +30,20 @@ function wordCounter(text) {
     
   }
 
-  function offensiveWordCensor(text) {
-    const textArray = text.split(" ");
-    let word = "******";
-    textArray.forEach(function(word) {
-        if (word.toLowerCase().includes("zoinks")) {
-            return word;
+
+
+function omitWords(text) {
+    const omittedWords = ["zoinks", "muppeteer", "biffaroni", "loopdaloop"];
+    const words = text.split(' ');
+    
+    words.forEach(function(word, index) {
+        if (omittedWords.includes(word.toLowerCase())) {
+        words[index] = ''; // Replace the word with asterisks
         }
     });
-    return textArray.join(" ");
-  }
+    
+    let omittedText = words.join(' ');
+    
+    return omittedText;
+    }
+

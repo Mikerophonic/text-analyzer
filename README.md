@@ -68,3 +68,12 @@ const text = "Red! Red. I like red, green, and yellow.";
 const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
+
+
+Describe: offensiveWordCensor()
+
+Test: "It should return the string with the word 'zoinks' omitted."
+Code: 
+const text = "hey zoinks how's it going zoinks"
+offensiveWordCensor(text)
+Expected Output = "hey how's it going"
